@@ -1,0 +1,10 @@
+NAME="dv2sub"
+VERSION=0.3
+RELEASE=1
+CATEGORY="Video"
+SUMMARY="Extracts information from DV files"
+DESCRIPTION="This is dv2sub, a simple utility that extracts the date and time
+of recording from a dv video file (using libdv) and outputs it as a subtitle
+file. It can also display other useful information about the dv stream."
+HOMEPAGE="http://dv2sub.sourceforge.net/"
+SRC_URI="mirror://sourceforge/dv2sub/dv2sub-${VERSION}.tar.gz"
