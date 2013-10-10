@@ -1,0 +1,22 @@
+--- origsrc/dv2sub-0.3/configure.ac	2007-03-05 07:26:54.000000000 -0600
++++ src/dv2sub-0.3/configure.ac	2013-10-10 12:52:37.628416800 -0500
+@@ -9,7 +9,7 @@ AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PAC
+ 
+ dnl Checks for programs.
+ AC_PROG_CC
+-test "x$GCC" = "xyes" && C99MODE_FLAG="-std=c99"
++test "x$GCC" = "xyes" && C99MODE_FLAG="-std=gnu99"
+ AC_SUBST(C99MODE_FLAG)
+ AM_PROG_CC_STDC
+ AC_C_BIGENDIAN
+--- origsrc/dv2sub-0.3/src/dv2sub.c	2008-01-14 03:38:31.000000000 -0600
++++ src/dv2sub-0.3/src/dv2sub.c	2013-10-10 12:53:53.848776400 -0500
+@@ -123,7 +123,7 @@ static int dv_stream(int fd, int pass_th
+ 	    break;
+ 	if ( len < FRAME_SIZE_MIN )
+ 	{
+-	    fprintf(stderr, "remains only %u bytes, premature EOF?\n",
++	    fprintf(stderr, "remains only %lu bytes, premature EOF?\n",
+ 		    (size_t)len);
+ 	    goto err_loop;
+ 	}

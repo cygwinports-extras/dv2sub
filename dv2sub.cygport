@@ -8,3 +8,4 @@ of recording from a dv video file (using libdv) and outputs it as a subtitle
 file. It can also display other useful information about the dv stream."
 HOMEPAGE="http://dv2sub.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dv2sub/dv2sub-${VERSION}.tar.gz"
+PATCH_URI="0.3-warnings.patch"
